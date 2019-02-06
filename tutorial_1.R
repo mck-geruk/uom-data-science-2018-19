@@ -21,9 +21,14 @@ library("tidyverse")
 
 # Tasks: 
 # How would I install the skimr package? 
+install.packages("skimr")
 # How would I load the skimr package? 
+library("skimr")
 # Do the same for following packages:
 # `skimr`, `RColorBrewer` and `ggthemes` 
+install.packages("`skimr`")
+library("`skimr`")
+
 
 ####
 # 2. Load data ----
@@ -38,6 +43,7 @@ skimr::skim(raw_data)
 
 ####
 # 3. Data manipulation with dplyr ----
+library(tidyverse)
 
 # In words, can you explain what %>% stands for? 
 
@@ -49,10 +55,16 @@ raw_data %>%
 # Task:
 
 # i. Select Age and Sex columns only 
+selected.data.2 <- raw_data %>%
+  dplyr::select(Age,Sex)
 
 # ii. Select all data apart from the Survived column
+selected.data.3 <- raw_data %>%
+  dplyr::select(-Survived)
 
 # iii. Select the first three variables using numeric 
+selected.data.4 <- raw_data %>%
+  dplyr::select(1:3)
 
 # Filtering data
 
