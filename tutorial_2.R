@@ -13,6 +13,10 @@
 # 1. Install and load libraries ----
 library("tidyverse")
 # You'll need the `leaflet` library, install it and load it
+install.packages("leaflet") # to do interactive maps using R
+library(leaflet)
+
+
 
 ####
 # 2. Create map of UoM ----
